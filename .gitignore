@@ -1,0 +1,24 @@
+# Python virtual environment
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Dataset files (large)
+dataset/
+ICBHI_final_database*/
+
+# Model training temporary files
+*.log
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# IDE files
+.vscode/
+.idea/
+
+# Windows files
+Thumbs.db
+desktop.ini

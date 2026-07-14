@@ -1,0 +1,21 @@
+BreathPrint Confusion Matrix
+============================
+
+Classes:
+0 - both
+1 - crackle
+2 - normal
+3 - wheeze
+
+
+              Predicted
+
+              both   crackle   normal   wheeze
+
+Actual both      5       37        36        3
+
+Actual crackle   2      191       120        1
+
+Actual normal    0      105       456        7
+
+Actual wheeze    1       42       102        4

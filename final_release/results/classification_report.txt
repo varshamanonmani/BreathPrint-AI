@@ -1,0 +1,108 @@
+BreathPrint Final Model Evaluation Report
+=========================================
+
+Project Name:
+BreathPrint — Respiratory Disorder Pre-Screening via Acoustic Lung Sound Analysis
+
+
+Final Model:
+breathprint_cycle_finetuned.keras
+
+
+Dataset:
+ICBHI 2017 Respiratory Sound Database
+
+
+Input Type:
+Respiratory cycle spectrogram images
+
+
+Classes:
+1. Both (Crackle + Wheeze)
+2. Crackle
+3. Normal
+4. Wheeze
+
+
+Model Architecture:
+MobileNetV2 Transfer Learning with Fine-Tuning
+
+
+Framework:
+TensorFlow / Keras
+
+
+Image Input Size:
+224 x 224 pixels
+
+
+Total Cycle Spectrograms:
+5574
+
+
+Training Configuration:
+- Initial Training: MobileNetV2
+- Fine-Tuning Epochs: 25
+- Optimizer: Adam
+- Learning Rate Scheduling Applied
+
+
+Final Validation Accuracy:
+58.99%
+
+
+Classification Report
+=====================
+
+              Precision    Recall    F1-score    Support
+
+both             0.6250     0.0617     0.1124        81
+
+crackle          0.5093     0.6083     0.5544       314
+
+normal           0.6387     0.8028     0.7114       568
+
+wheeze           0.2667     0.0268     0.0488       149
+
+
+Overall Accuracy:
+0.5899 (58.99%)
+
+
+Macro Average:
+Precision: 0.5099
+Recall:    0.3749
+F1-score:  0.3567
+
+
+Weighted Average:
+Precision: 0.5513
+Recall:    0.5899
+F1-score:  0.5346
+
+
+Confusion Matrix
+================
+
+              Predicted
+
+              Both   Crackle   Normal   Wheeze
+
+Actual Both     5       37        36        3
+
+Actual Crackle  2      191       120        1
+
+Actual Normal   0      105       456        7
+
+Actual Wheeze   1       42       102        4
+
+
+Conclusion:
+===========
+The BreathPrint model successfully performs respiratory sound
+classification using deep learning on lung sound spectrograms.
+
+The model demonstrates effective identification of normal and
+crackle respiratory patterns. Performance can be further improved
+by integrating additional respiratory sound datasets, advanced
+augmentation techniques, and optimized architectures in future work.

@@ -1,0 +1,57 @@
+BreathPrint Hardware Architecture
+
+1. Audio Acquisition Module
+
+Component:
+I2S MEMS Microphone (INMP441/SPH0645)
+
+Function:
+Captures respiratory sounds from the patient's chest area.
+
+
+2. Processing Module
+
+Component:
+ESP32-S3
+
+Function:
+- Receives digital audio data
+- Performs basic preprocessing
+- Transfers audio through Bluetooth/Wi-Fi
+
+
+3. AI Processing Module
+
+Platform:
+Laptop/Mobile Device
+
+Model:
+MobileNetV2 Fine-tuned Respiratory Sound Classifier
+
+Input:
+Respiratory Cycle Spectrogram
+
+Output:
+Normal / Crackle / Wheeze / Both
+
+
+4. Display Module
+
+Component:
+OLED Display
+
+Function:
+Shows prediction result and confidence.
+
+
+Communication:
+
+Microphone
+    ↓
+ESP32-S3
+    ↓
+Bluetooth/Wi-Fi
+    ↓
+AI Model
+    ↓
+OLED + Mobile App
